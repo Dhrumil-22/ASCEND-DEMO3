@@ -307,13 +307,24 @@ textarea.input {
     padding-left: calc(var(--space-4) + var(--space-3) - 3px);
 }
 
-.sidebar-nav-item .icon {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sidebar-nav-item .icon,
+.sidebar-nav-item i {
+    flex-shrink: 0;
+    opacity: 0.85;
+    transition: opacity var(--transition-base);
 }
+
+.sidebar-nav-item:hover .icon,
+.sidebar-nav-item:hover i {
+    opacity: 1;
+}
+
+.sidebar-nav-item.active .icon,
+.sidebar-nav-item.active i {
+    opacity: 1;
+    color: var(--primary);
+}
+
 
 .sidebar-footer {
     padding: 0 var(--space-4);
@@ -389,6 +400,9 @@ textarea.input {
     max-width: var(--max-content-width);
     margin: 0 auto;
     padding: var(--content-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-spacing);
 }
 
 /* Stats Card */

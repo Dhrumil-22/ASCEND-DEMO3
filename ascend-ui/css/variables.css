@@ -126,9 +126,10 @@
   --sidebar-width: 240px;
   --sidebar-collapsed-width: 72px;
   --header-height: 64px;
-  --max-content-width: 1200px;
+  --max-content-width: 1100px;
   --content-padding: 32px;
-  --max-content-width: 1400px;
+  --section-spacing: 28px;
+  --form-max-width: 720px;
 
   /* Z-index */
   --z-dropdown: 1000;

@@ -107,12 +107,21 @@
     text-decoration: underline;
 }
 
+/* Form Container (Ask Question, etc) */
+.form-container {
+    max-width: var(--form-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 /* Page Header System */
 .page-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .page-header-content {
@@ -328,8 +337,8 @@
 
 .quick-actions {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-4);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .quick-action {
@@ -374,8 +383,9 @@
 /* Career Exploration Grid */
 .company-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 20px;
+    align-items: stretch;
 }
 
 .company-card {
