@@ -44,6 +44,10 @@
                 <i data-lucide="users" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
                 <span>Discussion</span>
             </a>
+            <a href="student-profile.html" class="sidebar-nav-item">
+                <i data-lucide="user" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>My Profile</span>
+            </a>
         </nav>
 
         <div class="sidebar-footer">
@@ -136,11 +140,14 @@
                         <i data-lucide="target" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
                     </div>
                     <div class="current-goal-content">
-                        <div class="current-goal-label">Current Goal</div>
-                        <div class="current-goal-text">Senior Software Engineer at a FAANG Company</div>
+                        <div class="current-goal-label">CURRENT GOAL</div>
+                        <div class="current-goal-text" id="dashboardGoalText">Senior Software Engineer at a FAANG
+                            Company</div>
                     </div>
-                    <button class="btn btn-secondary btn-sm">Edit Goal</button>
+                    <button class="btn btn-outline btn-sm"
+                        onclick="window.location.href='student-profile.html#goal'">Edit Goal</button>
                 </div>
+
 
                 <!-- Recommended Mentors & Recent Activity -->
                 <div class="dashboard-grid">
@@ -292,8 +299,13 @@
 
     <script src="js/navigation.js"></script>
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedGoal = localStorage.getItem('ascend_current_goal');
+            if (savedGoal) {
+                document.getElementById('dashboardGoalText').textContent = savedGoal;
+            }
+        });
     </script>
 </body>
 

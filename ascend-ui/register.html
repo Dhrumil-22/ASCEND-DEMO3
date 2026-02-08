@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - ASCEND</title>
+    <title>Register - ASCEND</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,26 +22,30 @@
         <div class="auth-card">
             <div class="auth-header">
                 <div class="auth-logo">⚡</div>
-                <h1 class="auth-title">Welcome to ASCEND</h1>
-                <p class="auth-subtitle">Sign in to start your mentorship journey</p>
+                <h1 class="auth-title">Join ASCEND</h1>
+                <p class="auth-subtitle">Create an account to start your journey</p>
             </div>
 
-            <form class="auth-form" id="authForm">
+            <form class="auth-form" id="registerForm">
                 <div class="input-group">
-                    <label class="input-label">Select your role</label>
+                    <label class="input-label">I am a...</label>
                     <div class="role-selector">
                         <div class="role-option selected" data-role="student">
                             <div class="role-option-label">Student</div>
-                            <div class="role-option-desc">Seeking career guidance</div>
+                            <div class="role-option-desc">Looking for guidance</div>
                         </div>
                         <div class="role-option" data-role="mentor">
                             <div class="role-option-label">Mentor</div>
-                            <div class="role-option-desc">Provide guidance</div>
+                            <div class="role-option-desc">Willing to guide</div>
                         </div>
-                        <div class="role-option" data-role="admin">
-                            <div class="role-option-label">Admin</div>
-                            <div class="role-option-desc">Manage platform</div>
-                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="fullname">Full Name</label>
+                    <div class="input-icon">
+                        <span class="icon">👤</span>
+                        <input type="text" id="fullname" class="input" placeholder="John Doe" required>
                     </div>
                 </div>
 
@@ -59,19 +63,23 @@
                         <span class="icon">🔒</span>
                         <input type="password" id="password" class="input" placeholder="••••••••" required>
                     </div>
-                    <div style="text-align: right; margin-top: 8px;">
-                        <a href="forgot-password.html" style="font-size: 13px; color: var(--primary);">Forgot
-                            Password?</a>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="confirm-password">Confirm Password</label>
+                    <div class="input-icon">
+                        <span class="icon">🔒</span>
+                        <input type="password" id="confirm-password" class="input" placeholder="••••••••" required>
                     </div>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-lg">
-                    Sign In →
+                    Create Account →
                 </button>
             </form>
 
             <div class="auth-footer">
-                Don't have an account? <a href="register.html">Register</a>
+                Already have an account? <a href="index.html">Sign In</a>
             </div>
         </div>
     </div>
@@ -87,23 +95,13 @@
         });
 
         // Form submission
-        document.getElementById('authForm').addEventListener('submit', function (e) {
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const selectedRole = document.querySelector('.role-option.selected').dataset.role;
-            const email = document.getElementById('email').value;
 
-            // Store user info (in real app, this would be authenticated)
-            localStorage.setItem('userRole', selectedRole);
-            localStorage.setItem('userEmail', email);
-
-            // Redirect based on role
-            if (selectedRole === 'admin') {
-                window.location.href = 'admin-dashboard.html';
-            } else if (selectedRole === 'mentor') {
-                window.location.href = 'alumni-dashboard.html';
-            } else {
-                window.location.href = 'dashboard.html';
-            }
+            // Simulate registration
+            alert('Account created successfully! Please sign in.');
+            window.location.href = 'index.html';
         });
     </script>
 </body>

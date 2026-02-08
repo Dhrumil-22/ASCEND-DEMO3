@@ -40,9 +40,13 @@
                 <i data-lucide="compass" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
                 <span>Career Exploration</span>
             </a>
-            <a href="discussion.html" class="sidebar-nav-item">
+            <a href="discussion.html" class="sidebar-nav-item active">
                 <i data-lucide="users" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
                 <span>Discussion</span>
+            </a>
+            <a href="student-profile.html" class="sidebar-nav-item">
+                <i data-lucide="user" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>My Profile</span>
             </a>
         </nav>
 
@@ -89,16 +93,17 @@
     <main class="main-layout">
         <div class="page-container">
             <div class="main-content">
-               <div class="page-header with-action">
-                <div class="page-header-text">
-                    <h1 class="page-title">Community Discussion</h1>
-                    <p class="text-secondary">
-                        Connect with mentors and peers to discuss career topics.
-                    </p>
-                </div>
+                <div class="page-header with-action">
+                    <div class="page-header-text">
+                        <h1 class="page-title">Community Discussion</h1>
+                        <p class="text-secondary">
+                            Connect with mentors and peers to discuss career topics.
+                        </p>
+                    </div>
 
-                <button class="btn btn-primary btn-sm">+ New Thread</button>
-            </div>
+                    <button class="btn btn-primary btn-sm" onclick="window.location.href='create-thread.html'">+ New
+                        Thread</button>
+                </div>
 
                 <!-- Search and Filters -->
                 <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
