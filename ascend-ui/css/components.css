@@ -103,11 +103,7 @@
     transition: all var(--transition-base);
 }
 
-.input:focus {
-    outline: none;
-    border-color: var(--input-focus);
-    box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.1);
-}
+
 
 .input::placeholder {
     color: var(--text-tertiary);
@@ -320,6 +316,88 @@ textarea.input {
     margin-top: auto;
 }
 
+/* Collapsed Sidebar State */
+.sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+/* =========================================
+   Layout Expansion FIX (Explicit Sibling Selectors)
+   ========================================= */
+.sidebar.collapsed~.main-layout {
+    margin-left: var(--sidebar-collapsed-width) !important;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed~.header {
+    left: var(--sidebar-collapsed-width) !important;
+    transition: left 0.3s ease;
+}
+
+/* ========================================= */
+
+/* Hide logo text when collapsed */
+.sidebar.collapsed .sidebar-logo-text {
+    display: none;
+}
+
+/* Center logo icon */
+.sidebar.collapsed .sidebar-logo {
+    justify-content: center;
+    padding: 0;
+}
+
+/* Hide text labels but keep icons visible - be specific! */
+.sidebar.collapsed .sidebar-nav-item>span:not([data-lucide]) {
+    display: none;
+}
+
+/* Ensure icon elements stay visible */
+.sidebar.collapsed .sidebar-nav-item>i {
+    display: inline-flex !important;
+}
+
+/* Ensure Lucide SVG icons stay visible */
+.sidebar.collapsed .sidebar-nav-item>svg {
+    display: inline-flex !important;
+}
+
+/* Center nav items */
+.sidebar.collapsed .sidebar-nav-item {
+    justify-content: center;
+    padding: var(--space-3);
+    margin: 0 var(--space-2);
+    border-left: none;
+}
+
+/* Active state in collapsed sidebar */
+.sidebar.collapsed .sidebar-nav-item.active {
+    border-left: none;
+    background: rgba(77, 163, 255, 0.1);
+    border-radius: var(--radius-md);
+}
+
+/* Footer adjustments */
+.sidebar.collapsed .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+/* Hide footer text labels */
+.sidebar.collapsed .sidebar-footer>div>span:not([data-lucide]) {
+    display: none;
+}
+
+/* Ensure footer icons stay visible */
+.sidebar.collapsed .sidebar-footer>div>i,
+.sidebar.collapsed .sidebar-footer>div>svg,
+.sidebar.collapsed .sidebar-footer>a>i,
+.sidebar.collapsed .sidebar-footer>a>svg {
+    display: inline-flex !important;
+}
+
 /* Header */
 .header {
     position: fixed;
@@ -368,10 +446,26 @@ textarea.input {
     flex-shrink: 0;
 }
 
-.header-search .input {
+/* THIS is the actual search box */
+.input-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    height: 42px;
+    padding: 0 14px;
+
     background: #0F172A;
     border: 1px solid #1E293B;
     border-radius: 12px;
+}
+
+.input-icon .input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #E2E8F0;
 }
 
 .header-actions {

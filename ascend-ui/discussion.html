@@ -87,211 +87,220 @@
 
     <!-- Main Content -->
     <main class="main-layout">
-        <div class="main-content">
-            <div class="discussion-header">
-                <div>
+        <div class="page-container">
+            <div class="main-content">
+               <div class="page-header with-action">
+                <div class="page-header-text">
                     <h1 class="page-title">Community Discussion</h1>
-                    <p class="text-secondary">Connect with mentors and peers to discuss career topics.</p>
+                    <p class="text-secondary">
+                        Connect with mentors and peers to discuss career topics.
+                    </p>
                 </div>
-                <button class="btn btn-primary">+ New Thread</button>
+
+                <button class="btn btn-primary btn-sm">+ New Thread</button>
             </div>
 
-            <!-- Search and Filters -->
-            <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                <div class="input-icon" style="flex: 1;">
-                    <i data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
-                    <input type="text" class="input" placeholder="Search discussions...">
+                <!-- Search and Filters -->
+                <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div class="input-icon" style="flex: 1;">
+                        <i data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                        <input type="text" class="input" placeholder="Search discussions...">
+                    </div>
+                    <button class="btn btn-secondary">
+                        <i data-lucide="flame" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                        Latest
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i data-lucide="trending-up" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                        Trending
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i data-lucide="chevron-down" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                    </button>
                 </div>
-                <button class="btn btn-secondary">
-                    <i data-lucide="flame" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
-                    Latest
-                </button>
-                <button class="btn btn-secondary">
-                    <i data-lucide="trending-up" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
-                    Trending
-                </button>
-                <button class="btn btn-secondary">
-                    <i data-lucide="chevron-down" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
-                </button>
-            </div>
 
-            <!-- Thread List -->
-            <div class="thread-list">
-                <!-- Thread 1 -->
-                <div class="thread-card">
-                    <div class="thread-header">
-                        <div class="avatar avatar-lg">AJ</div>
-                        <div class="thread-content">
-                            <div class="thread-meta">
-                                <span class="thread-author">Alex Johnson</span>
-                                <span class="thread-badge">Student</span>
-                                <span class="thread-time">• 2 hours ago</span>
-                            </div>
-                            <h3 class="thread-title">Best resources for system design interviews?</h3>
-                            <p class="thread-excerpt">
-                                I'm preparing for FAANG interviews and looking for comprehensive system design
-                                resources. What books, courses, or practice platforms have worked for you?
-                            </p>
-                            <div class="thread-tags">
-                                <span class="badge badge-secondary">System Design</span>
-                                <span class="badge badge-secondary">Interview Prep</span>
-                                <span class="badge badge-secondary">FAANG</span>
-                            </div>
-                            <div class="thread-footer">
-                                <div class="thread-stat">
-                                    <i data-lucide="message-circle"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>24</span>
+                <!-- Thread List -->
+                <div class="thread-list">
+                    <!-- Thread 1 -->
+                    <div class="thread-card">
+                        <div class="thread-header">
+                            <div class="avatar avatar-lg">AJ</div>
+                            <div class="thread-content">
+                                <div class="thread-meta">
+                                    <span class="thread-author">Alex Johnson</span>
+                                    <span class="thread-badge">Student</span>
+                                    <span class="thread-time">• 2 hours ago</span>
                                 </div>
-                                <div class="thread-stat">
-                                    <i data-lucide="thumbs-up"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>156</span>
+                                <h3 class="thread-title">Best resources for system design interviews?</h3>
+                                <p class="thread-excerpt">
+                                    I'm preparing for FAANG interviews and looking for comprehensive system design
+                                    resources. What books, courses, or practice platforms have worked for you?
+                                </p>
+                                <div class="thread-tags">
+                                    <span class="badge badge-secondary">System Design</span>
+                                    <span class="badge badge-secondary">Interview Prep</span>
+                                    <span class="badge badge-secondary">FAANG</span>
+                                </div>
+                                <div class="thread-footer">
+                                    <div class="thread-stat">
+                                        <i data-lucide="message-circle"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>24</span>
+                                    </div>
+                                    <div class="thread-stat">
+                                        <i data-lucide="thumbs-up"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>156</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Thread 2 -->
-                <div class="thread-card">
-                    <div class="thread-header">
-                        <div class="avatar avatar-lg">DSC</div>
-                        <div class="thread-content">
-                            <div class="thread-meta">
-                                <span class="thread-author">Dr. Sarah Chen</span>
-                                <span class="thread-badge"
-                                    style="background: rgba(16, 185, 129, 0.1); color: var(--accent-green);">Mentor</span>
-                                <span class="thread-time">• 5 hours ago</span>
-                            </div>
-                            <h3 class="thread-title">Transitioning from Engineering to Product Management</h3>
-                            <p class="thread-excerpt">
-                                Many engineers ask me about transitioning to PM. Here are the key skills and experiences
-                                that helped them succeed in making this career switch.
-                            </p>
-                            <div class="thread-tags">
-                                <span class="badge badge-secondary">Career Change</span>
-                                <span class="badge badge-secondary">Product Management</span>
-                            </div>
-                            <div class="thread-footer">
-                                <div class="thread-stat">
-                                    <i data-lucide="message-circle"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>13</span>
+                    <!-- Thread 2 -->
+                    <div class="thread-card">
+                        <div class="thread-header">
+                            <div class="avatar avatar-lg">DSC</div>
+                            <div class="thread-content">
+                                <div class="thread-meta">
+                                    <span class="thread-author">Dr. Sarah Chen</span>
+                                    <span class="thread-badge"
+                                        style="background: rgba(16, 185, 129, 0.1); color: var(--accent-green);">Mentor</span>
+                                    <span class="thread-time">• 5 hours ago</span>
                                 </div>
-                                <div class="thread-stat">
-                                    <i data-lucide="thumbs-up"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>89</span>
+                                <h3 class="thread-title">Transitioning from Engineering to Product Management</h3>
+                                <p class="thread-excerpt">
+                                    Many engineers ask me about transitioning to PM. Here are the key skills and
+                                    experiences
+                                    that helped them succeed in making this career switch.
+                                </p>
+                                <div class="thread-tags">
+                                    <span class="badge badge-secondary">Career Change</span>
+                                    <span class="badge badge-secondary">Product Management</span>
+                                </div>
+                                <div class="thread-footer">
+                                    <div class="thread-stat">
+                                        <i data-lucide="message-circle"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>13</span>
+                                    </div>
+                                    <div class="thread-stat">
+                                        <i data-lucide="thumbs-up"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>89</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Thread 3 -->
-                <div class="thread-card">
-                    <div class="thread-header">
-                        <div class="avatar avatar-lg">MT</div>
-                        <div class="thread-content">
-                            <div class="thread-meta">
-                                <span class="thread-author">Michael Torres</span>
-                                <span class="thread-badge"
-                                    style="background: rgba(16, 185, 129, 0.1); color: var(--accent-green);">Mentor</span>
-                                <span class="thread-time">• 1 day ago</span>
-                            </div>
-                            <h3 class="thread-title">Negotiating your first tech offer - What you need to know</h3>
-                            <p class="thread-excerpt">
-                                Salary negotiation can be intimidating, especially for new grads. Here's a comprehensive
-                                guide on how to approach negotiations with confidence and maximize your compensation.
-                            </p>
-                            <div class="thread-tags">
-                                <span class="badge badge-secondary">Negotiation</span>
-                                <span class="badge badge-secondary">Compensation</span>
-                                <span class="badge badge-secondary">New Grad</span>
-                            </div>
-                            <div class="thread-footer">
-                                <div class="thread-stat">
-                                    <i data-lucide="message-circle"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>47</span>
+                    <!-- Thread 3 -->
+                    <div class="thread-card">
+                        <div class="thread-header">
+                            <div class="avatar avatar-lg">MT</div>
+                            <div class="thread-content">
+                                <div class="thread-meta">
+                                    <span class="thread-author">Michael Torres</span>
+                                    <span class="thread-badge"
+                                        style="background: rgba(16, 185, 129, 0.1); color: var(--accent-green);">Mentor</span>
+                                    <span class="thread-time">• 1 day ago</span>
                                 </div>
-                                <div class="thread-stat">
-                                    <i data-lucide="thumbs-up"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>312</span>
+                                <h3 class="thread-title">Negotiating your first tech offer - What you need to know</h3>
+                                <p class="thread-excerpt">
+                                    Salary negotiation can be intimidating, especially for new grads. Here's a
+                                    comprehensive
+                                    guide on how to approach negotiations with confidence and maximize your
+                                    compensation.
+                                </p>
+                                <div class="thread-tags">
+                                    <span class="badge badge-secondary">Negotiation</span>
+                                    <span class="badge badge-secondary">Compensation</span>
+                                    <span class="badge badge-secondary">New Grad</span>
+                                </div>
+                                <div class="thread-footer">
+                                    <div class="thread-stat">
+                                        <i data-lucide="message-circle"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>47</span>
+                                    </div>
+                                    <div class="thread-stat">
+                                        <i data-lucide="thumbs-up"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>312</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Thread 4 -->
-                <div class="thread-card">
-                    <div class="thread-header">
-                        <div class="avatar avatar-lg">JS</div>
-                        <div class="thread-content">
-                            <div class="thread-meta">
-                                <span class="thread-author">Jessica Smith</span>
-                                <span class="thread-badge">Student</span>
-                                <span class="thread-time">• 2 days ago</span>
-                            </div>
-                            <h3 class="thread-title">How important is a Master's degree for ML/AI roles?</h3>
-                            <p class="thread-excerpt">
-                                I'm considering pursuing a Master's in CS with a focus on ML. For those working in
-                                AI/ML, how critical was advanced education in landing your role?
-                            </p>
-                            <div class="thread-tags">
-                                <span class="badge badge-secondary">Machine Learning</span>
-                                <span class="badge badge-secondary">Education</span>
-                                <span class="badge badge-secondary">Career Advice</span>
-                            </div>
-                            <div class="thread-footer">
-                                <div class="thread-stat">
-                                    <i data-lucide="message-circle"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>31</span>
+                    <!-- Thread 4 -->
+                    <div class="thread-card">
+                        <div class="thread-header">
+                            <div class="avatar avatar-lg">JS</div>
+                            <div class="thread-content">
+                                <div class="thread-meta">
+                                    <span class="thread-author">Jessica Smith</span>
+                                    <span class="thread-badge">Student</span>
+                                    <span class="thread-time">• 2 days ago</span>
                                 </div>
-                                <div class="thread-stat">
-                                    <i data-lucide="thumbs-up"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>87</span>
+                                <h3 class="thread-title">How important is a Master's degree for ML/AI roles?</h3>
+                                <p class="thread-excerpt">
+                                    I'm considering pursuing a Master's in CS with a focus on ML. For those working in
+                                    AI/ML, how critical was advanced education in landing your role?
+                                </p>
+                                <div class="thread-tags">
+                                    <span class="badge badge-secondary">Machine Learning</span>
+                                    <span class="badge badge-secondary">Education</span>
+                                    <span class="badge badge-secondary">Career Advice</span>
+                                </div>
+                                <div class="thread-footer">
+                                    <div class="thread-stat">
+                                        <i data-lucide="message-circle"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>31</span>
+                                    </div>
+                                    <div class="thread-stat">
+                                        <i data-lucide="thumbs-up"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>87</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Thread 5 -->
-                <div class="thread-card">
-                    <div class="thread-header">
-                        <div class="avatar avatar-lg">RK</div>
-                        <div class="thread-content">
-                            <div class="thread-meta">
-                                <span class="thread-author">Raj Kumar</span>
-                                <span class="thread-badge">Student</span>
-                                <span class="thread-time">• 3 days ago</span>
-                            </div>
-                            <h3 class="thread-title">Remote work vs. office: Impact on early career growth?</h3>
-                            <p class="thread-excerpt">
-                                As someone starting their career, I'm torn between remote opportunities with better pay
-                                and in-office roles that might offer more mentorship. What's your experience?
-                            </p>
-                            <div class="thread-tags">
-                                <span class="badge badge-secondary">Remote Work</span>
-                                <span class="badge badge-secondary">Career Growth</span>
-                                <span class="badge badge-secondary">Work Culture</span>
-                            </div>
-                            <div class="thread-footer">
-                                <div class="thread-stat">
-                                    <i data-lucide="message-circle"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>56</span>
+                    <!-- Thread 5 -->
+                    <div class="thread-card">
+                        <div class="thread-header">
+                            <div class="avatar avatar-lg">RK</div>
+                            <div class="thread-content">
+                                <div class="thread-meta">
+                                    <span class="thread-author">Raj Kumar</span>
+                                    <span class="thread-badge">Student</span>
+                                    <span class="thread-time">• 3 days ago</span>
                                 </div>
-                                <div class="thread-stat">
-                                    <i data-lucide="thumbs-up"
-                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
-                                    <span>143</span>
+                                <h3 class="thread-title">Remote work vs. office: Impact on early career growth?</h3>
+                                <p class="thread-excerpt">
+                                    As someone starting their career, I'm torn between remote opportunities with better
+                                    pay
+                                    and in-office roles that might offer more mentorship. What's your experience?
+                                </p>
+                                <div class="thread-tags">
+                                    <span class="badge badge-secondary">Remote Work</span>
+                                    <span class="badge badge-secondary">Career Growth</span>
+                                    <span class="badge badge-secondary">Work Culture</span>
+                                </div>
+                                <div class="thread-footer">
+                                    <div class="thread-stat">
+                                        <i data-lucide="message-circle"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>56</span>
+                                    </div>
+                                    <div class="thread-stat">
+                                        <i data-lucide="thumbs-up"
+                                            style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
+                                        <span>143</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

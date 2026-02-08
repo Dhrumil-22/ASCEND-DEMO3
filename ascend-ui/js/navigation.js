@@ -19,24 +19,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
 
     if (collapseBtn) {
-        collapseBtn.addEventListener('click', function () {
-            const isCollapsed = sidebar.classList.toggle('collapsed');
+        collapseBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            const isCollapsed = sidebar.classList.contains('collapsed');
 
-            if (isCollapsed) {
-                sidebar.style.width = '80px';
-                mainLayout.style.marginLeft = '80px';
-                header.style.left = '80px';
-                document.querySelectorAll('.sidebar-logo-text, .sidebar-nav-item span:not(.icon)').forEach(el => {
-                    el.style.display = 'none';
-                });
-            } else {
-                sidebar.style.width = 'var(--sidebar-width)';
-                mainLayout.style.marginLeft = 'var(--sidebar-width)';
-                header.style.left = 'var(--sidebar-width)';
-                document.querySelectorAll('.sidebar-logo-text, .sidebar-nav-item span:not(.icon)').forEach(el => {
-                    el.style.display = '';
-                });
-            }
+            // Re-initialize Lucide icons after collapse animation
+            setTimeout(() => {
+                if (window.lucide) {
+                    lucide.createIcons();
+
+                    // FORCE icons visible with inline styles
+                    if (isCollapsed) {
+                        const svgs = document.querySelectorAll('.sidebar svg');
+                        svgs.forEach(svg => {
+                            svg.style.minWidth = '20px';
+                            svg.style.display = 'inline-flex';
+                            svg.style.opacity = '1';
+                            svg.style.visibility = 'visible';
+                            svg.style.stroke = '#8A97AA';
+                            svg.style.fill = 'none';
+                        });
+                    }
+                }
+            }, 100);
         });
     }
 

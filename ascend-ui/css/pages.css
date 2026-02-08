@@ -1,4 +1,49 @@
-/* Page-Specific Styles */
+/* ===================================
+   GLOBAL PAGE LAYOUT
+   =================================== */
+
+/* Global Page Container */
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Page Header Standard */
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    margin-bottom: 6px;
+}
+
+/* Page Search */
+.page-search {
+    margin: 20px 0 24px 0;
+    width: 100%;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+    margin-bottom: 32px;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Thread Cards */
+.thread-card {
+    margin-bottom: 20px;
+}
+
+/* ===================================
+   PAGE-SPECIFIC STYLES
+   =================================== */
 
 /* Auth Page */
 .auth-page {
@@ -108,15 +153,23 @@
 }
 
 /* Page Header System */
-.page-header {
+.page-header.with-action {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 32px;
+    align-items: flex-start;
 }
 
-.page-header-content {
-    flex: 1;
+.page-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 10px;
+    height: fit-content;
 }
 
 .page-title {

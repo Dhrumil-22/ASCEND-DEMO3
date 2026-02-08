@@ -47,7 +47,7 @@
         </nav>
 
         <div class="sidebar-footer">
-            <div class="sidebar-nav-item">
+            <div class="sidebar-nav-item" id="collapseBtn">
                 <i data-lucide="chevron-left" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
                 <span>Collapse</span>
             </div>
@@ -87,103 +87,108 @@
 
     <!-- Main Content -->
     <main class="main-layout">
-        <div class="main-content">
-            <div class="page-header">
-                <h1 class="page-title">Submit Your Career Question</h1>
-                <p class="text-secondary">Provide detailed information to receive meaningful guidance from experienced
-                    mentors.</p>
-            </div>
-
-            <div style="max-width: 800px;">
-                <!-- Tips Section -->
-                <div class="card"
-                    style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(76, 124, 245, 0.05); border: 1px solid rgba(76, 124, 245, 0.2);">
-                    <div style="display: flex; gap: 1rem;">
-                        <div style="font-size: 24px;"><i data-lucide="search"
-                                style="width: 18px; height: 18px; stroke-width: 1.5;"></i></div>
-                        <div>
-                            <h3 style="margin-bottom: 0.5rem; font-size: 1rem; font-weight: 600;">Tips for a Great
-                                Question</h3>
-                            <ul
-                                style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.75; padding-left: 1.25rem;">
-                                <li>Be specific about your career goals and current situation</li>
-                                <li>Provide context about your background and experience level</li>
-                                <li>Ask focused questions that mentors can provide actionable advice on</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="page-container">
+            <div class="main-content">
+                <div class="page-header">
+                    <h1 class="page-title">Submit Your Career Question</h1>
+                    <p class="text-secondary">Provide detailed information to receive meaningful guidance from
+                        experienced
+                        mentors.</p>
                 </div>
 
-                <!-- Question Form -->
-                <form id="questionForm">
-                    <!-- Current Skills -->
-                    <div class="input-group" style="margin-bottom: 2rem;">
-                        <label class="input-label">Current Skills</label>
-                        <p class="text-secondary" style="font-size: 0.875rem; margin-bottom: 0.75rem;">Add the technical
-                            and soft skills you currently possess.</p>
+                <div style="max-width: 800px;">
+                    <!-- Tips Section -->
+                    <div class="card"
+                        style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(76, 124, 245, 0.05); border: 1px solid rgba(76, 124, 245, 0.2);">
+                        <div style="display: flex; gap: 1rem;">
+                            <div style="font-size: 24px;"><i data-lucide="search"
+                                    style="width: 18px; height: 18px; stroke-width: 1.5;"></i></div>
+                            <div>
+                                <h3 style="margin-bottom: 0.5rem; font-size: 1rem; font-weight: 600;">Tips for a Great
+                                    Question</h3>
+                                <ul
+                                    style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.75; padding-left: 1.25rem;">
+                                    <li>Be specific about your career goals and current situation</li>
+                                    <li>Provide context about your background and experience level</li>
+                                    <li>Ask focused questions that mentors can provide actionable advice on</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-                        <div id="skillsContainer"
-                            style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-                            <div class="tag tag-removable">
-                                <span>JavaScript</span>
-                                <button type="button" class="tag-remove"
-                                    onclick="this.parentElement.remove()">×</button>
+                    <!-- Question Form -->
+                    <form id="questionForm">
+                        <!-- Current Skills -->
+                        <div class="input-group" style="margin-bottom: 2rem;">
+                            <label class="input-label">Current Skills</label>
+                            <p class="text-secondary" style="font-size: 0.875rem; margin-bottom: 0.75rem;">Add the
+                                technical
+                                and soft skills you currently possess.</p>
+
+                            <div id="skillsContainer"
+                                style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <div class="tag tag-removable">
+                                    <span>JavaScript</span>
+                                    <button type="button" class="tag-remove"
+                                        onclick="this.parentElement.remove()">×</button>
+                                </div>
+                                <div class="tag tag-removable">
+                                    <span>React</span>
+                                    <button type="button" class="tag-remove"
+                                        onclick="this.parentElement.remove()">×</button>
+                                </div>
+                                <div class="tag tag-removable">
+                                    <span>Node.js</span>
+                                    <button type="button" class="tag-remove"
+                                        onclick="this.parentElement.remove()">×</button>
+                                </div>
                             </div>
-                            <div class="tag tag-removable">
-                                <span>React</span>
-                                <button type="button" class="tag-remove"
-                                    onclick="this.parentElement.remove()">×</button>
-                            </div>
-                            <div class="tag tag-removable">
-                                <span>Node.js</span>
-                                <button type="button" class="tag-remove"
-                                    onclick="this.parentElement.remove()">×</button>
+
+                            <div style="display: flex; gap: 0.5rem;">
+                                <input type="text" id="skillInput" class="input"
+                                    placeholder="Add a skill (e.g., Python, Leadership)" style="flex: 1;">
+                                <button type="button" class="btn btn-secondary" onclick="addSkill()">+ Add</button>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 0.5rem;">
-                            <input type="text" id="skillInput" class="input"
-                                placeholder="Add a skill (e.g., Python, Leadership)" style="flex: 1;">
-                            <button type="button" class="btn btn-secondary" onclick="addSkill()">+ Add</button>
+                        <!-- Target Career Role -->
+                        <div class="input-group" style="margin-bottom: 2rem;">
+                            <label class="input-label" for="targetRole">Target Career Role</label>
+                            <p class="text-secondary" style="font-size: 0.875rem; margin-bottom: 0.75rem;">What role are
+                                you
+                                aiming for in your career?</p>
+                            <input type="text" id="targetRole" class="input"
+                                placeholder="e.g., Senior Software Engineer, Product Manager" required>
                         </div>
-                    </div>
 
-                    <!-- Target Career Role -->
-                    <div class="input-group" style="margin-bottom: 2rem;">
-                        <label class="input-label" for="targetRole">Target Career Role</label>
-                        <p class="text-secondary" style="font-size: 0.875rem; margin-bottom: 0.75rem;">What role are you
-                            aiming for in your career?</p>
-                        <input type="text" id="targetRole" class="input"
-                            placeholder="e.g., Senior Software Engineer, Product Manager" required>
-                    </div>
+                        <!-- Your Question -->
+                        <div class="input-group" style="margin-bottom: 2rem;">
+                            <label class="input-label" for="question">Your Question</label>
+                            <p class="text-secondary" style="font-size: 0.875rem; margin-bottom: 0.75rem;">Describe your
+                                question in detail.</p>
+                            <textarea id="question" class="input" placeholder="What specific guidance are you seeking?"
+                                rows="8" required></textarea>
+                        </div>
 
-                    <!-- Your Question -->
-                    <div class="input-group" style="margin-bottom: 2rem;">
-                        <label class="input-label" for="question">Your Question</label>
-                        <p class="text-secondary" style="font-size: 0.875rem; margin-bottom: 0.75rem;">Describe your
-                            question in detail.</p>
-                        <textarea id="question" class="input" placeholder="What specific guidance are you seeking?"
-                            rows="8" required></textarea>
-                    </div>
+                        <!-- Submit Button -->
+                        <div style="display: flex; gap: 1rem;">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit Question →</button>
+                            <button type="button" class="btn btn-secondary btn-lg"
+                                onclick="window.location.href='dashboard.html'">Cancel</button>
+                        </div>
+                    </form>
 
-                    <!-- Submit Button -->
-                    <div style="display: flex; gap: 1rem;">
-                        <button type="submit" class="btn btn-primary btn-lg">Submit Question →</button>
-                        <button type="button" class="btn btn-secondary btn-lg"
-                            onclick="window.location.href='dashboard.html'">Cancel</button>
-                    </div>
-                </form>
-
-                <!-- Success Message (hidden by default) -->
-                <div id="successMessage"
-                    style="display: none; margin-top: 2rem; padding: 1.5rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 0.75rem;">
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="font-size: 32px;">✅</div>
-                        <div>
-                            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">Question
-                                Submitted!</h3>
-                            <p style="font-size: 0.875rem; color: var(--text-secondary);">Your question has been
-                                submitted to mentors for review.</p>
+                    <!-- Success Message (hidden by default) -->
+                    <div id="successMessage"
+                        style="display: none; margin-top: 2rem; padding: 1.5rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 0.75rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="font-size: 32px;">✅</div>
+                            <div>
+                                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">Question
+                                    Submitted!</h3>
+                                <p style="font-size: 0.875rem; color: var(--text-secondary);">Your question has been
+                                    submitted to mentors for review.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
