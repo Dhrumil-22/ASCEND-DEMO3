@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Exploration - ASCEND</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="sidebar-logo-icon">⚡</div>
+            <div class="sidebar-logo-text">ASCEND</div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="sidebar-nav-item">
+                <span class="icon">📊</span>
+                Dashboard
+            </a>
+            <a href="ask-question.html" class="sidebar-nav-item">
+                <span class="icon">❓</span>
+                Ask Question
+            </a>
+            <a href="career-exploration.html" class="sidebar-nav-item active">
+                <span class="icon">🔍</span>
+                Career Exploration
+            </a>
+            <a href="discussion.html" class="sidebar-nav-item">
+                <span class="icon">💬</span>
+                Discussion
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="sidebar-nav-item">
+                <span class="icon">◀</span>
+                Collapse
+            </div>
+            <a href="index.html" class="sidebar-nav-item">
+                <span class="icon">🚪</span>
+                Sign Out
+            </a>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-search">
+            <div class="input-icon">
+                <span class="icon">🔍</span>
+                <input type="text" class="input" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button class="btn btn-secondary btn-sm">🔔</button>
+            <button class="btn btn-primary">⚡ Ask Question</button>
+            <div class="header-user">
+                <div class="header-user-info">
+                    <div class="header-user-name">Alex Johnson</div>
+                    <div class="header-user-role">Student</div>
+                </div>
+                <div class="avatar avatar-md">AJ</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-layout">
+        <div class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Career Exploration</h1>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <div class="input-icon">
+                    <span class="icon">🔍</span>
+                    <input type="text" class="input" placeholder="Search companies, roles, experiences, or roadmaps...">
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active" data-tab="companies">🏢 Companies</div>
+                <div class="tab" data-tab="paths">🛤️ Career Paths</div>
+                <div class="tab" data-tab="experiences">💼 Experiences</div>
+                <div class="tab" data-tab="roadmaps">🗺️ Roadmaps</div>
+            </div>
+
+            <!-- Tab Content: Companies -->
+            <div class="tab-content active" id="companies">
+                <div class="company-grid">
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">G</div>
+                            <div class="company-info">
+                                <div class="company-name">Google</div>
+                                <div class="company-rating">
+                                    <span class="star">⭐</span>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="icon">👥</span>
+                            <span>156 open roles</span>
+                        </div>
+                        <div class="company-footer">
+                            <button class="btn btn-primary btn-sm">Explore →</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">M</div>
+                            <div class="company-info">
+                                <div class="company-name">Microsoft</div>
+                                <div class="company-rating">
+                                    <span class="star">⭐</span>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="icon">👥</span>
+                            <span>142 open roles</span>
+                        </div>
+                        <div class="company-footer">
+                            <button class="btn btn-primary btn-sm">Explore →</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">A</div>
+                            <div class="company-info">
+                                <div class="company-name">Amazon</div>
+                                <div class="company-rating">
+                                    <span class="star">⭐</span>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="icon">👥</span>
+                            <span>198 open roles</span>
+                        </div>
+                        <div class="company-footer">
+                            <button class="btn btn-primary btn-sm">Explore →</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">GS</div>
+                            <div class="company-info">
+                                <div class="company-name">Goldman Sachs</div>
+                                <div class="company-rating">
+                                    <span class="star">⭐</span>
+                                    <span>4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="icon">👥</span>
+                            <span>87 open roles</span>
+                        </div>
+                        <div class="company-footer">
+                            <button class="btn btn-primary btn-sm">Explore →</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">Mc</div>
+                            <div class="company-info">
+                                <div class="company-name">McKinsey</div>
+                                <div class="company-rating">
+                                    <span class="star">⭐</span>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="icon">👥</span>
+                            <span>64 open roles</span>
+                        </div>
+                        <div class="company-footer">
+                            <button class="btn btn-primary btn-sm">Explore →</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">Ap</div>
+                            <div class="company-info">
+                                <div class="company-name">Apple</div>
+                                <div class="company-rating">
+                                    <span class="star">⭐</span>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="icon">👥</span>
+                            <span>134 open roles</span>
+                        </div>
+                        <div class="company-footer">
+                            <button class="btn btn-primary btn-sm">Explore →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Career Paths -->
+            <div class="tab-content" id="paths">
+                <div class="company-grid">
+                    <div class="card card-interactive">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Software Engineering
+                        </h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span class="badge badge-secondary">Junior</span>
+                            <span class="badge badge-secondary">Mid</span>
+                            <span class="badge badge-secondary">Senior</span>
+                            <span class="badge badge-secondary">Staff</span>
+                            <span class="badge badge-secondary">Principal</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.875rem; color: var(--text-secondary);">45 mentors</span>
+                            <button class="btn btn-primary btn-sm">View Full Path</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-interactive">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Product Management</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span class="badge badge-secondary">APM</span>
+                            <span class="badge badge-secondary">PM</span>
+                            <span class="badge badge-secondary">Senior PM</span>
+                            <span class="badge badge-secondary">Director</span>
+                            <span class="badge badge-secondary">VP</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.875rem; color: var(--text-secondary);">52 mentors</span>
+                            <button class="btn btn-primary btn-sm">View Full Path</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-interactive">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Data Science</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span class="badge badge-secondary">Analyst</span>
+                            <span class="badge badge-secondary">Data Scientist</span>
+                            <span class="badge badge-secondary">Senior DS</span>
+                            <span class="badge badge-secondary">Lead</span>
+                            <span class="badge badge-secondary">Director</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.875rem; color: var(--text-secondary);">28 mentors</span>
+                            <button class="btn btn-primary btn-sm">View Full Path</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-interactive">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Investment Banking</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span class="badge badge-secondary">Analyst</span>
+                            <span class="badge badge-secondary">Associate</span>
+                            <span class="badge badge-secondary">VP</span>
+                            <span class="badge badge-secondary">Director</span>
+                            <span class="badge badge-secondary">MD</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.875rem; color: var(--text-secondary);">19 mentors</span>
+                            <button class="btn btn-primary btn-sm">View Full Path</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Experiences -->
+            <div class="tab-content" id="experiences">
+                <div style="max-width: 800px;">
+                    <div class="card" style="margin-bottom: 1.5rem; padding: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="avatar avatar-lg">SC</div>
+                            <div style="flex: 1;">
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                    <div>
+                                        <h3 style="font-size: 1.125rem; font-weight: 600;">Sarah Chen</h3>
+                                        <p style="font-size: 0.875rem; color: var(--text-secondary);">Software Engineer
+                                            Lead at <strong>Google</strong></p>
+                                    </div>
+                                </div>
+                                <p
+                                    style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1rem;">
+                                    After 5 years as an IC, I transitioned to management. Here's what I learned about
+                                    the switch...
+                                </p>
+                                <div style="font-size: 0.75rem; color: var(--text-tertiary);">213 found this helpful
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-sm">Read More →</button>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem; padding: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="avatar avatar-lg">MT</div>
+                            <div style="flex: 1;">
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                    <div>
+                                        <h3 style="font-size: 1.125rem; font-weight: 600;">Michael Torres</h3>
+                                        <p style="font-size: 0.875rem; color: var(--text-secondary);">Principal at
+                                            <strong>Stripe</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p
+                                    style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1rem;">
+                                    Breaking into product from consulting was challenging but possible. My path
+                                    involved...
+                                </p>
+                                <div style="font-size: 0.75rem; color: var(--text-tertiary);">187 found this helpful
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-sm">Read More →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Roadmaps -->
+            <div class="tab-content" id="roadmaps">
+                <div class="company-grid">
+                    <div class="card card-interactive">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div
+                                style="width: 48px; height: 48px; background: rgba(76, 124, 245, 0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                🗺️</div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start;">
+                                    <div>
+                                        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Breaking
+                                            into FAANG as a New Grad</h3>
+                                        <p style="font-size: 0.875rem; color: var(--text-secondary);">by Dr. Sarah Chen
+                                        </p>
+                                    </div>
+                                    <span class="badge badge-primary">6 days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 1rem;">12-14 saves
+                        </div>
+                        <button class="btn btn-primary btn-sm" style="width: 100%;">View Roadmap</button>
+                    </div>
+
+                    <div class="card card-interactive">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div
+                                style="width: 48px; height: 48px; background: rgba(76, 124, 245, 0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                🗺️</div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start;">
+                                    <div>
+                                        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">From
+                                            Bootcamp to Senior Engineer</h3>
+                                        <p style="font-size: 0.875rem; color: var(--text-secondary);">by Michael Torres
+                                        </p>
+                                    </div>
+                                    <span class="badge badge-primary">10 days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 1rem;">197 saves
+                        </div>
+                        <button class="btn btn-primary btn-sm" style="width: 100%;">View Roadmap</button>
+                    </div>
+
+                    <div class="card card-interactive">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div
+                                style="width: 48px; height: 48px; background: rgba(76, 124, 245, 0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                🗺️</div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start;">
+                                    <div>
+                                        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Product
+                                            Manager Interview Prep</h3>
+                                        <p style="font-size: 0.875rem; color: var(--text-secondary);">by Emily Watson
+                                        </p>
+                                    </div>
+                                    <span class="badge badge-primary">6 days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 1rem;">176 saves
+                        </div>
+                        <button class="btn btn-primary btn-sm" style="width: 100%;">View Roadmap</button>
+                    </div>
+
+                    <div class="card card-interactive">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div
+                                style="width: 48px; height: 48px; background: rgba(76, 124, 245, 0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                🗺️</div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start;">
+                                    <div>
+                                        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Data
+                                            Science Career Progression</h3>
+                                        <p style="font-size: 0.875rem; color: var(--text-secondary);">by Alex Rivera</p>
+                                    </div>
+                                    <span class="badge badge-primary">12 days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 1rem;">654 saves
+                        </div>
+                        <button class="btn btn-primary btn-sm" style="width: 100%;">View Roadmap</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/navigation.js"></script>
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Show corresponding content
+                const tabId = this.dataset.tab;
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Check URL for tab parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const tab = urlParams.get('tab');
+        if (tab) {
+            const tabElement = document.querySelector(`[data-tab="${tab}"]`);
+            if (tabElement) {
+                tabElement.click();
+            }
+        }
+    </script>
+</body>
+
+</html>

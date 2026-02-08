@@ -1,0 +1,33 @@
+# ASCEND Flask Backend - Python Dependencies
+
+# Core Flask framework
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Database ORM
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.23
+
+# Authentication and session management
+Flask-Login==0.6.3
+
+# Cross-Origin Resource Sharing (CORS)
+Flask-CORS==4.0.0
+
+# Environment variable management
+python-dotenv==1.0.0
+
+# Production WSGI server (optional, for deployment)
+gunicorn==21.2.0
+
+# Database migrations (optional, recommended for production)
+# Flask-Migrate==4.0.5
+# alembic==1.12.1
+
+# Testing (optional)
+# pytest==7.4.3
+# pytest-flask==1.3.0
+
+# API documentation (optional)
+# flask-swagger-ui==4.11.1
+# flasgger==0.9.7.1
