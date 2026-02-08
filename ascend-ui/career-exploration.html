@@ -102,7 +102,7 @@
             </div>
 
             <!-- Tab Content: Companies -->
-            <div class="tab-content active" id="companies">
+            <div class="tab-content active" data-tab="companies">
                 <div class="company-grid">
                     <div class="company-card">
                         <div class="company-header">
@@ -227,7 +227,7 @@
             </div>
 
             <!-- Tab Content: Career Paths -->
-            <div class="tab-content" id="paths">
+            <div class="tab-content" data-tab="paths">
                 <div class="company-grid">
                     <div class="card card-interactive">
                         <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Software Engineering
@@ -293,7 +293,7 @@
             </div>
 
             <!-- Tab Content: Experiences -->
-            <div class="tab-content" id="experiences">
+            <div class="tab-content" data-tab="experiences">
                 <div style="max-width: 800px;">
                     <div class="card" style="margin-bottom: 1.5rem; padding: 1.5rem;">
                         <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
@@ -347,7 +347,7 @@
             </div>
 
             <!-- Tab Content: Roadmaps -->
-            <div class="tab-content" id="roadmaps">
+            <div class="tab-content" data-tab="roadmaps">
                 <div class="company-grid">
                     <div class="card card-interactive">
                         <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
@@ -440,33 +440,10 @@
         </div>
     </main>
 
+    <script src="js/sidebar.js"></script>
     <script src="js/navigation.js"></script>
     <script>
-        // Tab switching
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', function () {
-                // Remove active class from all tabs and content
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-
-                // Add active class to clicked tab
-                this.classList.add('active');
-
-                // Show corresponding content
-                const tabId = this.dataset.tab;
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-
-        // Check URL for tab parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const tab = urlParams.get('tab');
-        if (tab) {
-            const tabElement = document.querySelector(`[data-tab="${tab}"]`);
-            if (tabElement) {
-                tabElement.click();
-            }
-        }
+        // Tab switching is now handled by sidebar.js
     </script>
 </body>
 

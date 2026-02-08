@@ -109,11 +109,15 @@
 
 /* Form Container (Ask Question, etc) */
 .form-container {
-    max-width: var(--form-max-width);
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
+}
+
+.form-container textarea.input {
+    min-height: 160px;
 }
 
 /* Page Header System */
