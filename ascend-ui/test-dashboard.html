@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ASCEND</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Component Containers -->
+    <div id="sidebar-container"></div>
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-layout">
+        <div class="main-content">
+            <div class="page-header">
+                <div class="page-header-content">
+                    <h1 class="page-title">Welcome back, Alex!</h1>
+                    <p class="page-subtitle">Track your progress and connect with mentors</p>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="card">
+                    <div class="stats-card-icon blue">
+                        <i data-lucide="target" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                    </div>
+                    <div class="stats-card-content">
+                        <div class="stats-card-value">12</div>
+                        <div class="stats-card-label">Questions Asked</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="stats-card-icon green">
+                        <i data-lucide="mail" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                    </div>
+                    <div class="stats-card-content">
+                        <div class="stats-card-value">8</div>
+                        <div class="stats-card-label">Mentor Responses</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="stats-card-icon purple">
+                        <i data-lucide="book-open" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                    </div>
+                    <div class="stats-card-content">
+                        <div class="stats-card-value">3</div>
+                        <div class="stats-card-label">Roadmaps Saved</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Left Column -->
+                <div>
+                    <!-- Current Goal -->
+                    <div class="card" style="margin-bottom: 24px;">
+                        <div class="section-header">
+                            <div class="section-title">
+                                <i data-lucide="activity" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                                Current Goal
+                            </div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">Break into product management at a
+                            top tech company</p>
+                        <div
+                            style="background: var(--bg-input); border-radius: var(--radius-md); height: 8px; overflow: hidden;">
+                            <div style="background: var(--primary); height: 100%; width: 65%;"></div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-top: 8px;">65% Complete</p>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="card">
+                        <div class="section-header">
+                            <div class="section-title">
+                                <i data-lucide="activity" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                                Recent Activity
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="avatar avatar-sm">SC</div>
+                            <div class="activity-content">
+                                <div class="activity-text">
+                                    <strong>Sarah Chen</strong> answered your question about PM interviews
+                                </div>
+                                <div class="activity-meta">2 hours ago</div>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="avatar avatar-sm">MT</div>
+                            <div class="activity-content">
+                                <div class="activity-text">
+                                    <strong>Michael Torres</strong> recommended a roadmap
+                                </div>
+                                <div class="activity-meta">5 hours ago</div>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="avatar avatar-sm">EW</div>
+                            <div class="activity-content">
+                                <div class="activity-text">
+                                    You saved <strong>Product Manager Interview Prep</strong> roadmap
+                                </div>
+                                <div class="activity-meta">1 day ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div>
+                    <!-- Recommended Mentors -->
+                    <div class="card">
+                        <div class="section-header">
+                            <div class="section-title">
+                                <i data-lucide="users" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                                Recommended Mentors
+                            </div>
+                        </div>
+
+                        <div class="mentor-card">
+                            <div class="avatar avatar-lg">SC</div>
+                            <div class="mentor-info">
+                                <div class="mentor-name">Sarah Chen</div>
+                                <div class="mentor-role">Senior PM at Google</div>
+                                <div class="mentor-expertise">Product Strategy, User Research</div>
+                            </div>
+                        </div>
+
+                        <div class="mentor-card">
+                            <div class="avatar avatar-lg">MT</div>
+                            <div class="mentor-info">
+                                <div class="mentor-name">Michael Torres</div>
+                                <div class="mentor-role">Engineering Lead at Stripe</div>
+                                <div class="mentor-expertise">System Design, Career Growth</div>
+                            </div>
+                        </div>
+
+                        <div class="mentor-card">
+                            <div class="avatar avatar-lg">EW</div>
+                            <div class="mentor-info">
+                                <div class="mentor-name">Emily Watson</div>
+                                <div class="mentor-role">Director at Microsoft</div>
+                                <div class="mentor-expertise">Leadership, Mentorship</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="card">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i data-lucide="zap" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                        Quick Actions
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <div class="quick-action" onclick="window.location.href='career-exploration.html'">
+                        <div class="quick-action-icon">
+                            <i data-lucide="building-2" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                        </div>
+                        <div class="quick-action-label">Explore Companies</div>
+                    </div>
+
+                    <div class="quick-action" onclick="window.location.href='career-exploration.html?tab=paths'">
+                        <div class="quick-action-icon">
+                            <i data-lucide="map" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                        </div>
+                        <div class="quick-action-label">View Career Paths</div>
+                    </div>
+
+                    <div class="quick-action" onclick="window.location.href='ask-question.html'">
+                        <div class="quick-action-icon">
+                            <i data-lucide="message-circle-question"
+                                style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                        </div>
+                        <div class="quick-action-label">Ask a Question</div>
+                    </div>
+
+                    <div class="quick-action" onclick="window.location.href='discussion.html'">
+                        <div class="quick-action-icon">
+                            <i data-lucide="message-square" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                        </div>
+                        <div class="quick-action-label">Join Discussion</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Layout Script -->
+    <script src="js/layout.js"></script>
+    <script>
+        // Initialize layout when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initLayout);
+        } else {
+            initLayout();
+        }
+    </script>
+</body>
+
+</html>

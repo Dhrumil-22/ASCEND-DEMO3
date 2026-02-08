@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discussion - ASCEND</title>
+    <title>Dashboard - ASCEND</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -27,31 +29,31 @@
 
         <nav class="sidebar-nav">
             <a href="dashboard.html" class="sidebar-nav-item">
-                <span class="icon">📊</span>
-                Dashboard
+                <i data-lucide="layout-dashboard" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Dashboard</span>
             </a>
             <a href="ask-question.html" class="sidebar-nav-item">
-                <span class="icon">❓</span>
-                Ask Question
+                <i data-lucide="message-circle" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Ask Question</span>
             </a>
             <a href="career-exploration.html" class="sidebar-nav-item">
-                <span class="icon">🔍</span>
-                Career Exploration
+                <i data-lucide="compass" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Career Exploration</span>
             </a>
-            <a href="discussion.html" class="sidebar-nav-item active">
-                <span class="icon">💬</span>
-                Discussion
+            <a href="discussion.html" class="sidebar-nav-item">
+                <i data-lucide="users" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Discussion</span>
             </a>
         </nav>
 
         <div class="sidebar-footer">
-            <div class="sidebar-nav-item">
-                <span class="icon">◀</span>
-                Collapse
+            <div class="sidebar-nav-item" id="collapseBtn">
+                <i data-lucide="chevron-left" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Collapse</span>
             </div>
             <a href="index.html" class="sidebar-nav-item">
-                <span class="icon">🚪</span>
-                Sign Out
+                <i data-lucide="log-out" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Sign Out</span>
             </a>
         </div>
     </aside>
@@ -60,14 +62,19 @@
     <header class="header">
         <div class="header-search">
             <div class="input-icon">
-                <span class="icon">🔍</span>
+                <i data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
                 <input type="text" class="input" placeholder="Search...">
             </div>
         </div>
 
         <div class="header-actions">
-            <button class="btn btn-secondary btn-sm">🔔</button>
-            <button class="btn btn-primary">⚡ Ask Question</button>
+            <button class="btn btn-secondary btn-sm">
+                <i data-lucide="bell" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+            </button>
+            <button class="btn btn-primary" onclick="window.location.href='ask-question.html'">
+                <i data-lucide="zap" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                Ask Question
+            </button>
             <div class="header-user">
                 <div class="header-user-info">
                     <div class="header-user-name">Alex Johnson</div>
@@ -92,19 +99,19 @@
             <!-- Search and Filters -->
             <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
                 <div class="input-icon" style="flex: 1;">
-                    <span class="icon">🔍</span>
+                    <i data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
                     <input type="text" class="input" placeholder="Search discussions...">
                 </div>
                 <button class="btn btn-secondary">
-                    <span class="icon">🔥</span>
+                    <i data-lucide="flame" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
                     Latest
                 </button>
                 <button class="btn btn-secondary">
-                    <span class="icon">📈</span>
+                    <i data-lucide="trending-up" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
                     Trending
                 </button>
                 <button class="btn btn-secondary">
-                    <span class="icon">🔽</span>
+                    <i data-lucide="chevron-down" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
                 </button>
             </div>
 
@@ -132,11 +139,13 @@
                             </div>
                             <div class="thread-footer">
                                 <div class="thread-stat">
-                                    <span class="icon">💬</span>
+                                    <i data-lucide="message-circle"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>24</span>
                                 </div>
                                 <div class="thread-stat">
-                                    <span class="icon">👍</span>
+                                    <i data-lucide="thumbs-up"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>156</span>
                                 </div>
                             </div>
@@ -166,11 +175,13 @@
                             </div>
                             <div class="thread-footer">
                                 <div class="thread-stat">
-                                    <span class="icon">💬</span>
+                                    <i data-lucide="message-circle"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>13</span>
                                 </div>
                                 <div class="thread-stat">
-                                    <span class="icon">👍</span>
+                                    <i data-lucide="thumbs-up"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>89</span>
                                 </div>
                             </div>
@@ -201,11 +212,13 @@
                             </div>
                             <div class="thread-footer">
                                 <div class="thread-stat">
-                                    <span class="icon">💬</span>
+                                    <i data-lucide="message-circle"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>47</span>
                                 </div>
                                 <div class="thread-stat">
-                                    <span class="icon">👍</span>
+                                    <i data-lucide="thumbs-up"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>312</span>
                                 </div>
                             </div>
@@ -235,11 +248,13 @@
                             </div>
                             <div class="thread-footer">
                                 <div class="thread-stat">
-                                    <span class="icon">💬</span>
+                                    <i data-lucide="message-circle"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>31</span>
                                 </div>
                                 <div class="thread-stat">
-                                    <span class="icon">👍</span>
+                                    <i data-lucide="thumbs-up"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>87</span>
                                 </div>
                             </div>
@@ -269,11 +284,13 @@
                             </div>
                             <div class="thread-footer">
                                 <div class="thread-stat">
-                                    <span class="icon">💬</span>
+                                    <i data-lucide="message-circle"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>56</span>
                                 </div>
                                 <div class="thread-stat">
-                                    <span class="icon">👍</span>
+                                    <i data-lucide="thumbs-up"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                                     <span>143</span>
                                 </div>
                             </div>
@@ -285,6 +302,10 @@
     </main>
 
     <script src="js/navigation.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

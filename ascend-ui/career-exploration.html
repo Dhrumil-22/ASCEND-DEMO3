@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Exploration - ASCEND</title>
+    <title>Dashboard - ASCEND</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -27,31 +29,31 @@
 
         <nav class="sidebar-nav">
             <a href="dashboard.html" class="sidebar-nav-item">
-                <span class="icon">📊</span>
-                Dashboard
+                <i data-lucide="layout-dashboard" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Dashboard</span>
             </a>
             <a href="ask-question.html" class="sidebar-nav-item">
-                <span class="icon">❓</span>
-                Ask Question
+                <i data-lucide="message-circle" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Ask Question</span>
             </a>
-            <a href="career-exploration.html" class="sidebar-nav-item active">
-                <span class="icon">🔍</span>
-                Career Exploration
+            <a href="career-exploration.html" class="sidebar-nav-item">
+                <i data-lucide="compass" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Career Exploration</span>
             </a>
             <a href="discussion.html" class="sidebar-nav-item">
-                <span class="icon">💬</span>
-                Discussion
+                <i data-lucide="users" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Discussion</span>
             </a>
         </nav>
 
         <div class="sidebar-footer">
-            <div class="sidebar-nav-item">
-                <span class="icon">◀</span>
-                Collapse
+            <div class="sidebar-nav-item" id="collapseBtn">
+                <i data-lucide="chevron-left" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Collapse</span>
             </div>
             <a href="index.html" class="sidebar-nav-item">
-                <span class="icon">🚪</span>
-                Sign Out
+                <i data-lucide="log-out" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Sign Out</span>
             </a>
         </div>
     </aside>
@@ -60,14 +62,19 @@
     <header class="header">
         <div class="header-search">
             <div class="input-icon">
-                <span class="icon">🔍</span>
+                <i data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
                 <input type="text" class="input" placeholder="Search...">
             </div>
         </div>
 
         <div class="header-actions">
-            <button class="btn btn-secondary btn-sm">🔔</button>
-            <button class="btn btn-primary">⚡ Ask Question</button>
+            <button class="btn btn-secondary btn-sm">
+                <i data-lucide="bell" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+            </button>
+            <button class="btn btn-primary" onclick="window.location.href='ask-question.html'">
+                <i data-lucide="zap" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                Ask Question
+            </button>
             <div class="header-user">
                 <div class="header-user-info">
                     <div class="header-user-name">Alex Johnson</div>
@@ -88,17 +95,29 @@
             <!-- Search Bar -->
             <div class="search-bar">
                 <div class="input-icon">
-                    <span class="icon">🔍</span>
+                    <i data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
                     <input type="text" class="input" placeholder="Search companies, roles, experiences, or roadmaps...">
                 </div>
             </div>
 
             <!-- Tabs -->
             <div class="tabs">
-                <div class="tab active" data-tab="companies">🏢 Companies</div>
-                <div class="tab" data-tab="paths">🛤️ Career Paths</div>
-                <div class="tab" data-tab="experiences">💼 Experiences</div>
-                <div class="tab" data-tab="roadmaps">🗺️ Roadmaps</div>
+                <div class="tab active" data-tab="companies">
+                    <i data-lucide="building-2" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                    Companies
+                </div>
+                <div class="tab" data-tab="paths">
+                    <i data-lucide="route" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                    Career Paths
+                </div>
+                <div class="tab" data-tab="experiences">
+                    <i data-lucide="briefcase" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                    Experiences
+                </div>
+                <div class="tab" data-tab="roadmaps">
+                    <i data-lucide="map" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                    Roadmaps
+                </div>
             </div>
 
             <!-- Tab Content: Companies -->
@@ -110,13 +129,14 @@
                             <div class="company-info">
                                 <div class="company-name">Google</div>
                                 <div class="company-rating">
-                                    <span class="star">⭐</span>
+                                    <i data-lucide="star"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5; fill: currentColor;"></i>
                                     <span>4.5</span>
                                 </div>
                             </div>
                         </div>
                         <div class="company-meta">
-                            <span class="icon">👥</span>
+                            <i data-lucide="users" style="width: 16px; height: 16px; stroke-width: 1.5;"></i>
                             <span>156 open roles</span>
                         </div>
                         <div class="company-footer">
@@ -130,7 +150,8 @@
                             <div class="company-info">
                                 <div class="company-name">Microsoft</div>
                                 <div class="company-rating">
-                                    <span class="star">⭐</span>
+                                    <i data-lucide="star"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5; fill: currentColor;"></i>
                                     <span>4.7</span>
                                 </div>
                             </div>
@@ -150,7 +171,8 @@
                             <div class="company-info">
                                 <div class="company-name">Amazon</div>
                                 <div class="company-rating">
-                                    <span class="star">⭐</span>
+                                    <i data-lucide="star"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5; fill: currentColor;"></i>
                                     <span>4.5</span>
                                 </div>
                             </div>
@@ -170,7 +192,8 @@
                             <div class="company-info">
                                 <div class="company-name">Goldman Sachs</div>
                                 <div class="company-rating">
-                                    <span class="star">⭐</span>
+                                    <i data-lucide="star"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5; fill: currentColor;"></i>
                                     <span>4.6</span>
                                 </div>
                             </div>
@@ -190,7 +213,8 @@
                             <div class="company-info">
                                 <div class="company-name">McKinsey</div>
                                 <div class="company-rating">
-                                    <span class="star">⭐</span>
+                                    <i data-lucide="star"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5; fill: currentColor;"></i>
                                     <span>4.7</span>
                                 </div>
                             </div>
@@ -210,7 +234,8 @@
                             <div class="company-info">
                                 <div class="company-name">Apple</div>
                                 <div class="company-rating">
-                                    <span class="star">⭐</span>
+                                    <i data-lucide="star"
+                                        style="width: 16px; height: 16px; stroke-width: 1.5; fill: currentColor;"></i>
                                     <span>4.8</span>
                                 </div>
                             </div>
@@ -467,6 +492,10 @@
                 tabElement.click();
             }
         }
+    </script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
     </script>
 </body>
 

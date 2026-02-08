@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask a Question - ASCEND</title>
+    <title>Dashboard - ASCEND</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,14 +62,19 @@
     <header class="header">
         <div class="header-search">
             <div class="input-icon">
-                <span class="icon">🔍</span>
+                <span data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></span>
                 <input type="text" class="input" placeholder="Search...">
             </div>
         </div>
 
         <div class="header-actions">
-            <button class="btn btn-secondary btn-sm">🔔</button>
-            <button class="btn btn-primary">⚡ Ask Question</button>
+            <button class="btn btn-secondary btn-sm">
+                <i data-lucide="bell" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+            </button>
+            <button class="btn btn-primary" onclick="window.location.href='ask-question.html'">
+                <i data-lucide="zap" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                Ask Question
+            </button>
             <div class="header-user">
                 <div class="header-user-info">
                     <div class="header-user-name">Alex Johnson</div>
@@ -94,7 +99,8 @@
                 <div class="card"
                     style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(76, 124, 245, 0.05); border: 1px solid rgba(76, 124, 245, 0.2);">
                     <div style="display: flex; gap: 1rem;">
-                        <div style="font-size: 24px;">💡</div>
+                        <div style="font-size: 24px;"><i data-lucide="search"
+                                style="width: 18px; height: 18px; stroke-width: 1.5;"></i></div>
                         <div>
                             <h3 style="margin-bottom: 0.5rem; font-size: 1rem; font-weight: 600;">Tips for a Great
                                 Question</h3>
