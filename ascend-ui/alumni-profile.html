@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ASCEND</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Sidebar (Alumni) -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="sidebar-logo-icon">⚡</div>
+            <div class="sidebar-logo-text">ASCEND</div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="alumni-dashboard.html" class="sidebar-nav-item">
+                <i data-lucide="layout-dashboard" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="mentorship-requests.html" class="sidebar-nav-item">
+                <i data-lucide="users" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Mentorship</span>
+            </a>
+            <a href="alumni-profile.html" class="sidebar-nav-item active">
+                <i data-lucide="user" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>My Profile</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="sidebar-nav-item" id="collapseBtn">
+                <i data-lucide="chevron-left" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Collapse</span>
+            </div>
+            <a href="index.html" class="sidebar-nav-item">
+                <i data-lucide="log-out" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Sign Out</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-search">
+            <div class="input-icon">
+                <i data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                <input type="text" class="input" placeholder="Search...">
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-secondary btn-sm">
+                <i data-lucide="bell" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+            </button>
+            <div class="header-user">
+                <div class="header-user-info">
+                    <div class="header-user-name">Dr. Sarah Chen</div>
+                    <div class="header-user-role">Alumni Mentor</div>
+                </div>
+                <div class="avatar avatar-md">SC</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-layout">
+        <div class="page-container">
+            <div class="main-content">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1 class="page-title">Edit Profile</h1>
+                        <p class="page-subtitle">Update your public mentor profile and expertise.</p>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px;">
+                    <!-- Edit Form -->
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <h3 style="margin-bottom: 20px; font-size: 18px; font-weight: 600;">Basic Information
+                                </h3>
+
+                                <div class="input-group">
+                                    <label class="input-label">Full Name</label>
+                                    <input type="text" class="input" value="Dr. Sarah Chen">
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label">Current Role</label>
+                                    <input type="text" class="input" value="Software Engineer Lead">
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label">Company / Organization</label>
+                                    <input type="text" class="input" value="Google">
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label">Bio</label>
+                                    <textarea class="textarea"
+                                        rows="4">Software Engineer Lead at Google with 10+ years of experience in distributed systems and cloud infrastructure. Passionate about helping students break into big tech.</textarea>
+                                </div>
+
+                                <h3 style="margin: 24px 0 20px 0; font-size: 18px; font-weight: 600;">Expertise Areas
+                                </h3>
+                                <div class="input-group">
+                                    <label class="input-label">Skills (Comma separated)</label>
+                                    <input type="text" class="input"
+                                        value="System Design, Backend Development, Career Growth, Interview Prep">
+                                    <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <span class="badge">System Design</span>
+                                        <span class="badge">Backend Development</span>
+                                        <span class="badge">Career Growth</span>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 32px; display: flex; justify-content: flex-end;">
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Profile Preview -->
+                    <div>
+                        <h3
+                            style="margin-bottom: 16px; font-size: 14px; color: var(--text-secondary); text-transform: uppercase;">
+                            Public Preview</h3>
+                        <div class="card">
+                            <div class="card-body" style="text-align: center;">
+                                <div class="avatar avatar-lg"
+                                    style="width: 80px; height: 80px; font-size: 32px; margin: 0 auto 16px auto;">SC
+                                </div>
+                                <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 4px;">Dr. Sarah Chen</h3>
+                                <div style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">Software
+                                    Engineer Lead</div>
+                                <div
+                                    style="color: var(--primary); font-size: 14px; font-weight: 500; margin-bottom: 16px;">
+                                    Google</div>
+
+                                <div
+                                    style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;">
+                                    <span class="badge badge-success">Top Rated</span>
+                                    <span class="badge">98% Trust</span>
+                                </div>
+
+                                <button class="btn btn-primary btn-sm" style="width: 100%;" disabled>Ask
+                                    Question</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="js/navigation.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

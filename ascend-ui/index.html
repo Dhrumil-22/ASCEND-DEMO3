@@ -92,8 +92,14 @@
             localStorage.setItem('userRole', selectedRole);
             localStorage.setItem('userEmail', email);
 
-            // Redirect to dashboard
-            window.location.href = 'dashboard.html';
+            // Redirect based on role
+            if (selectedRole === 'admin') {
+                window.location.href = 'admin-dashboard.html';
+            } else if (selectedRole === 'mentor') {
+                window.location.href = 'alumni-dashboard.html';
+            } else {
+                window.location.href = 'dashboard.html';
+            }
         });
     </script>
 </body>

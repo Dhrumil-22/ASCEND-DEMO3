@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Dashboard - ASCEND</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Sidebar (Alumni) -->
+    <aside class="sidebar">
+        <!-- Logo -->
+        <div class="sidebar-logo">
+            <div class="sidebar-logo-icon">⚡</div>
+            <div class="sidebar-logo-text">ASCEND</div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+            <a href="alumni-dashboard.html" class="sidebar-nav-item active">
+                <i data-lucide="layout-dashboard" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="mentorship-requests.html" class="sidebar-nav-item">
+                <i data-lucide="users" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Mentorship</span>
+            </a>
+            <a href="alumni-profile.html" class="sidebar-nav-item">
+                <i data-lucide="user" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>My Profile</span>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <div class="sidebar-footer">
+            <div class="sidebar-nav-item" id="collapseBtn">
+                <i data-lucide="chevron-left" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Collapse</span>
+            </div>
+            <a href="index.html" class="sidebar-nav-item">
+                <i data-lucide="log-out" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                <span>Sign Out</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-search">
+            <div class="input-icon">
+                <i data-lucide="search" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                <input type="text" class="input" placeholder="Search requests...">
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button class="btn btn-secondary btn-sm">
+                <i data-lucide="bell" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+            </button>
+            <div class="header-user">
+                <div class="header-user-info">
+                    <div class="header-user-name">Dr. Sarah Chen</div>
+                    <div class="header-user-role">Alumni Mentor</div>
+                </div>
+                <div class="avatar avatar-md">SC</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-layout">
+        <div class="page-container">
+            <div class="main-content">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1 class="page-title">Welcome back, Sarah</h1>
+                        <p class="page-subtitle">Your mentorship impact overview.</p>
+                    </div>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <div class="stats-card-icon blue">
+                            <i data-lucide="users" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                        </div>
+                        <div class="stats-card-content">
+                            <div class="stats-card-value">12</div>
+                            <div class="stats-card-label">Active Mentees</div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-card-icon green">
+                            <i data-lucide="clock" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                        </div>
+                        <div class="stats-card-content">
+                            <div class="stats-card-value">45h</div>
+                            <div class="stats-card-label">Hours Contributed</div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-card-icon purple">
+                            <i data-lucide="shield-check" style="width: 24px; height: 24px; stroke-width: 1.5;"></i>
+                        </div>
+                        <div class="stats-card-content">
+                            <div class="stats-card-value">98%</div>
+                            <div class="stats-card-label">Trust Score</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Requests & Upcoming -->
+                <div class="dashboard-grid">
+                    <!-- Pending Requests is critical for mentors -->
+                    <div class="dashboard-section" style="grid-column: span 2;">
+                        <div class="section-header">
+                            <div>
+                                <div class="section-title">
+                                    <i data-lucide="inbox"
+                                        style="width: 20px; height: 20px; stroke-width: 1.5; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+                                    Recent Mentorship Requests
+                                </div>
+                            </div>
+                            <a href="mentorship-requests.html" class="btn btn-secondary btn-sm">View All</a>
+                        </div>
+
+                        <!-- Request Item 1 -->
+                        <div class="activity-item">
+                            <div class="avatar avatar-md activity-avatar">JD</div>
+                            <div class="activity-content">
+                                <div class="activity-header" style="justify-content: space-between; display: flex;">
+                                    <strong>John Doe</strong>
+                                    <span class="badge badge-warning">Pending</span>
+                                </div>
+                                <div class="activity-text">
+                                    Requested guidance on "Breaking into Google as a New Grad".
+                                </div>
+                                <div class="activity-meta" style="margin-top: 8px;">
+                                    <button class="btn btn-primary btn-sm"
+                                        style="padding: 4px 12px; font-size: 12px;">Accept</button>
+                                    <button class="btn btn-secondary btn-sm"
+                                        style="padding: 4px 12px; font-size: 12px; margin-left: 8px;">Decline</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Request Item 2 -->
+                        <div class="activity-item">
+                            <div class="avatar avatar-md activity-avatar">AS</div>
+                            <div class="activity-content">
+                                <div class="activity-header" style="justify-content: space-between; display: flex;">
+                                    <strong>Alice Smith</strong>
+                                    <span class="badge badge-warning">Pending</span>
+                                </div>
+                                <div class="activity-text">
+                                    Looking for resume review for Data Science roles.
+                                </div>
+                                <div class="activity-meta" style="margin-top: 8px;">
+                                    <button class="btn btn-primary btn-sm"
+                                        style="padding: 4px 12px; font-size: 12px;">Accept</button>
+                                    <button class="btn btn-secondary btn-sm"
+                                        style="padding: 4px 12px; font-size: 12px; margin-left: 8px;">Decline</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="js/navigation.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
